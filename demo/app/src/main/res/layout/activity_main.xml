@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!--（后面写Variable）-->
+
+    </data>
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/white2">
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5" />
+        <TextView
+            android:id="@+id/textView_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="关注"
+            android:textColor="#FF6347"
+            android:layout_weight="0.6"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:id="@+id/textView_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="热门"
+            android:textColor="#FF6347"
+            android:layout_weight="0.6"
+            android:textSize="22sp"/>
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@id/ll_1"
+        android:layout_above="@+id/ll_2"
+
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="38dp">
+        <Button
+            android:id="@+id/button_1"
+            android:layout_weight="0.8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/homepage5"/>
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2" />
+
+        <Button
+            android:id="@+id/button_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:background="@drawable/message"
+
+            />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.2" />
+        <Button
+            android:id="@+id/button_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:background="@drawable/add"/>
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.2" />
+        <Button
+            android:id="@+id/button_4"
+            android:layout_weight="0.8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/magnifier"/>
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.2" />
+        <Button
+            android:id="@+id/button_5"
+            android:layout_weight="0.8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

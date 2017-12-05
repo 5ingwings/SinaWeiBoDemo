@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data>
+    <variable
+        name="itemModel"
+        type="com.scnu.sihao.sinaweibodemo.Model.entity.ItemModel"/>
+
+    <variable
+        name="position"
+        type="int"/>
+
+    <variable
+        name="ninePictureArray"
+        type="String[][]"/>
+
+</data>
+
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white"
+    >
+
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="3dp"
+        app:imageUrl="@{itemModel.UserImage}"
+        />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="280dp"
+        android:layout_height="15dp"
+        android:layout_toRightOf="@+id/user_image"
+        android:layout_marginLeft="6dp"
+        android:text="@{itemModel.ScreenName}"
+        android:textColor="#FF6347"
+        android:layout_toEndOf="@+id/user_image"
+        android:layout_marginStart="6dp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_alignBottom="@+id/user_image"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_alignStart="@+id/user_name"
+        android:layout_marginLeft="4dp"
+        android:text="@{itemModel.CreateAt}"
+        android:textColor="#575757"
+        android:textSize="10sp"
+        android:layout_width="120dp"
+        android:layout_height="15dp"
+        tools:ignore="SmallSp"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_alignBottom="@+id/time"
+        android:layout_toEndOf="@+id/time"
+        android:layout_toRightOf="@+id/time"
+        android:text="@{itemModel.Source}"
+        android:textColor="#575757"
+        android:textSize="10sp"
+        android:layout_width="180dp"
+        android:layout_height="15dp"
+        tools:ignore="SmallSp" />
+    <Button
+        android:id="@+id/guanzhu"
+        android:text="@string/guanZhu"
+        android:textColor="#FF6347"
+        android:layout_alignTop="@+id/user_name"
+        android:layout_height="20dp"
+        android:layout_width="45dp"
+        android:layout_toRightOf="@+id/user_name"
+        android:background="@drawable/buttonstyle"
+        android:layout_toEndOf="@+id/user_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+    <Button
+        android:id="@+id/delete"
+        android:layout_alignTop="@+id/user_name"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/guanzhu"
+        android:background="@drawable/delete"
+        android:layout_toEndOf="@+id/guanzhu"
+        android:layout_marginStart="25dp" />
+    <TextView
+        android:id="@+id/body_text"
+        android:layout_below="@+id/user_image"
+        android:text="@{itemModel.BodyText}"
+        android:textColor="#080808"
+        android:textSize="15sp"
+        android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+        />
+
+
+<LinearLayout
+    android:id="@+id/ll_4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/body_text"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView
+        android:id="@+id/image_1"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][0]}"/>
+    <ImageView
+        android:id="@+id/image_2"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][1]}"
+        />
+    <ImageView
+        android:id="@+id/image_3"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][2]}"
+        />
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_4"
+        android:layout_marginTop="10dp"
+        >
+    <ImageView
+        android:id="@+id/image_4"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][3]}"
+        />
+    <ImageView
+        android:id="@+id/image_5"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][4]}"
+         />
+    <ImageView
+        android:id="@+id/image_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][5]}"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_5"
+        android:layout_marginTop="15dp"
+        >
+
+    <ImageView
+        android:id="@+id/image_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][6]}"
+        />
+    <ImageView
+        android:id="@+id/image_8"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][7]}"
+         />
+    <ImageView
+        android:id="@+id/image_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:imageUrl="@{ninePictureArray[position][8]}"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/white3"
+        android:layout_below="@id/ll_6"
+        >
+
+        <Button
+            android:id="@+id/transmit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/send"
+            android:paddingBottom="15dp"
+            android:paddingRight="23dp"
+            android:text="@{itemModel.RepostsCount}" />
+        <Button
+            android:id="@+id/comment"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/comment"
+            android:text="@{itemModel.CommentsCount}"
+            android:paddingRight="23dp"
+            android:paddingBottom="20dp"
+            />
+        <Button
+            android:id="@+id/good"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/good"
+            android:text="@{itemModel.AttitudesCount}"
+            android:paddingRight="23dp"
+            android:paddingBottom="15dp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
+
+</layout>
+
+

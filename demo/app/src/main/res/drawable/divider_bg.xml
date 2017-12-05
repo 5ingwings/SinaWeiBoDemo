@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle" >
+    <!-- 如果能设置每个博客为wrapcontent，则可以不设置color 这个color为apptheme的颜色 然后博客中是白色为背景-->
+        <gradient
+            android:centerColor="#DEDEDE"
+            android:endColor="#CFCFCF"
+            android:startColor="#CDC5BF"
+            android:type="linear" />
+        <size android:height="5dp"/>
+
+    </shape>
+
